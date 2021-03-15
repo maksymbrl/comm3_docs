@@ -154,8 +154,8 @@ Commander framework is part of the following projects:
 This work has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreements No 819478 (ERC; Cosmoglobe), 772253 (ERC; bits2cosmology) and 776282 (COMPET-4; BeyondPlanck).
 
 <p align="center">
-    <img src="./logo/LOGO_ERC-FLAG_EU_.jpg" height="200" width="200">
-    <img src="./logo/horizon2020_logo.jpg" height="200" width="200">
+    <img src="./logo/LOGO_ERC-FLAG_EU_.jpg" height="200" width="125%">
+    <img src="./logo/horizon2020_logo.jpg" height="200" width="100%">
 </p>
 
 ---

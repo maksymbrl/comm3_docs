@@ -78,6 +78,18 @@
    <!-- Enabling the "Edit on GitHub button" -->
    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
    <script>
+      mermaid.initialize({
+	 startOnLoad: false
+      });
+      let id = 0;
+      // Creating Warning in hte header
+      var headerWarning = [
+	 '<div class="alert flat info">',
+	 '<p class="title">',
+	 '<i class="fas fa-info-circle"></i>Note</p><p class="txt">',
+	 'Please note that all current documentation is in pre-release mode and should be considered in <strong>alpha</strong> state, until this warning is removed!',
+	 '</p></div><hr/>',
+      ].join('');
       // Creating new variable to modify footer
       var footer = [
          '<footer>',
@@ -117,6 +129,14 @@
                }
             }
 	 },
+	 plugins: [
+		 EditOnGithubPlugin.create('', '', 'Edit this page'),
+		 function (hook) {
+			 hook.afterEach(function (html) {
+				 return headerWarning + html + footer;
+			 });
+		 }
+	 ]
         /*
         themeable: {
           readyTransition : true, // default
@@ -130,7 +150,7 @@
    <!-- Required -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
    <!-- To use Themeable themes for Docsify-->
-   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+   <!--<script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>-->
 
    <!-- Recommended -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
@@ -138,6 +158,7 @@
    <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
    <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+   <!-- Enabling Pagination ("Next", "Previous" buttons) -->
    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 </html>

@@ -19,6 +19,16 @@
   <li>BeyondPlanck Website</li>
 </ul>
 
+<style>
+ .demo-theme-preview a {
+    padding-right: 10px;
+ }
+
+ .demo-theme-preview a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+ }
+</style>
 
 <script>
   var preview = Docsify.dom.find('.demo-theme-preview');

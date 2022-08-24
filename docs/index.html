@@ -63,6 +63,16 @@
      }
    </style>
    -->
+   <style>
+     .demo-theme-preview a {
+        padding-right: 10px;
+     }
+   
+     .demo-theme-preview a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+     }
+   </style>
 </head>
    
 <body>
@@ -77,6 +87,20 @@
    <script src="//cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
    <!-- Enabling the "Edit on GitHub button" -->
    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+   <!-- Experimental feature to enable theme changes -->
+   <script>
+      var preview = Docsify.dom.find('.demo-theme-preview');
+      var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+
+      preview.onclick = function (e) {
+         var title = e.target.getAttribute('data-theme');
+
+         themes.forEach(function (theme) {
+            theme.disabled = theme.title !== title;
+         });
+      };
+   </script>
+	
    <script>
       mermaid.initialize({
 	 startOnLoad: false

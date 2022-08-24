@@ -43,24 +43,7 @@ Some text to see whether we have gotten the right stuff
   };
 </script>
 
-# Theoretical Background
 
-[Commander3](https://github.com/Cosmoglobe/Commander) is a Bayesian Markov Chain Monte Carlo sampler for CMB, microwave and sub-mm observations. It fits a user-specified parametric model, $s(\theta)$, to some set of observations, $d_\nu$, by mapping the posterior distribution $P(\theta|d)$ with standard sampling techniques, in particular Gibbs and Metropolis sampling. A concrete example of this is the [BeyondPlanck](https://beyondplanck.science) data model, which reads
-$$
-d_{j,t} = g_{j,t}\mathsf P_{tp,j}\left[ \mathsf B^{\mathrm{symm}}_{pp',j}\sum_{c} \mathsf M_{cj}(\beta_{p'}, \Delta_\mathrm{bp}^{j})a^c_{p'} + \mathsf B^{\mathrm{asymm}}_{pp',j}\left(s^{\mathrm{orb}}_{j,t} + s^{\mathrm{fsl}}_{j,t}\right)\right] + n^{\mathrm{corr}}_{j,t} + n^{\mathrm{w}}_{j,t}
-$$
-where $j$ represents a radiometer label, $t$ indicates a single time sample, $p$ denotes a single pixel on the sky, and $c$ represents one single astrophysical signal component, while
-
-- $d_{j,t}$ denotes the measured data value in units of V, this is the calibrated timestream as output from the instrument;
-- $g_{j,t}$ denotes the instrumental gain in units of V K$_{\mathrm{cmb}}^{-1}$;
-- $\mathsf P_{tp,j}$ is the $N_{\mathrm{TOD}}\times 3N_{\mathrm{pix}}$ pointing matrix stored as compressed pointing and polarization angle timestream per detector;
-- $\mathsf B_{pp',j}$ denotes the beam convolution term, where the asymmetric part is only calculated for the orbital dipole and sidelobe terms;
-- $\mathsf M_{cj}(\beta_{p}, \Delta_\mathrm{bp})$ denotes element $(c,j)$ of an $N_{\mathrm{comp}}\times N_{\mathrm{comp}}$ mixing matrix, describing the amplitude of component $c$ as seen by radiometer $j$ relative to some reference frequency $j_0$ when assuming some set of bandpass correction parameters $\Delta_\mathrm{bp}$;
-- $a^c_{p}$ is the amplitude of component $c$ in pixel $p$, measured at the same reference frequency as the mixing matrix $\mathsf M$;
-- $s^{\mathrm{orb}}_{j,t}$ is the orbital CMB dipole signal, including relativistic quadrupole corrections;
-- $s^{\mathrm{fsl}}_{j,t}$ denotes the contribution from far sidelobes;
-- $n^{\mathrm{corr}}_{j,t}$ denotes correlated instrumental noise;
-- $n^{\mathrm{w}}_{j,t}$ is uncorrelated (white) instrumental noise, which is not sampled and is simply left to average down in the maps.
 
 However, the formalism and code are designed to be flexible and extendible, and a wide range of other models may be considered after suitable code modifications.
 

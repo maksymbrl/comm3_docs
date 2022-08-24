@@ -78,31 +78,40 @@
    <!-- Enabling the "Edit on GitHub button" -->
    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
    <script>
-     // Docsify Configuration
-     window.$docsify = {
-        <!-- Enabling Cover Page -->
-        coverpage: true,
-        <!-- Enabling Script execution in the text -->
-        executeScript: true,
-        <!-- Enabling Sidebar -->
-        loadSidebar: true,
-        <!-- Enabling Navigation Bar -->
-        loadNavbar: true,
-        auto2top: true,
-        subMaxLevel: 2,
-        pagination: {
-           previousText: 'Previous',
-           nextText: 'Next',
-           crossChapter: true,
-           crossChapterText: true,
-        },
+      // Creating new variable to modify footer
+      var footer = [
+         '<footer>',
+         '<hr/>',
+         '<img src="_media/horizon_2020.jpg">',
+         '<img src="_media/flag_yellow_low.jpg">',
+         "<span>BeyondPlanck has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 776282.</span>",
+         '</footer>'
+      ].join('');
+      // Docsify Configuration
+      window.$docsify = {
+         <!-- Enabling Cover Page -->
+         coverpage: true,
+         <!-- Enabling Script execution in the text -->
+         executeScript: true,
+         <!-- Enabling Sidebar -->
+         loadSidebar: true,
+         <!-- Enabling Navigation Bar -->
+         loadNavbar: true,
+         auto2top: true,
+         subMaxLevel: 2,
+         pagination: {
+            previousText: 'Previous',
+            nextText: 'Next',
+            crossChapter: true,
+            crossChapterText: true,
+         },
         /*
         themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
         }
         */
-     };
+      };
    </script>
 
    <!-- Required -->

@@ -1,1 +1,2 @@
-* [Main Website](https://beyondplanck.science)
+* [Cosmoglobe Website](https://www.cosmoglobe.uio.no/)
+* [BeyondPlanck Website](https://beyondplanck.science)

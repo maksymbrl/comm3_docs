@@ -11,13 +11,27 @@
   <li>
     <!-- Rounded switch -->
     <label class="switch">
-      <input type="checkbox">
+      <input type="checkbox" onclick="myFunction()">
       <span class="slider round"></span>
     </label>
   </li>
   <li>Cosmoglobe Website</li>
   <li>BeyondPlanck Website</li>
 </ul>
+
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 <style>
  .demo-theme-preview a {

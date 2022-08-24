@@ -21,17 +21,18 @@
 
 <button onclick="myFunction()">Toggle dark mode</button>
 
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
-
 .dark-mode {
   background-color: black;
   color: white;
 }
+
+<script>
+function myFunction() {
+   //var element = document.body;
+   var element = Docsify.dom;
+   element.classList.toggle("dark-mode");
+}
+</script>
 
 <style>
  .demo-theme-preview a {

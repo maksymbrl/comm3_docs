@@ -8,10 +8,16 @@
     </ul>
   </li>
   <li>Another element</li>
+  <li>
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </li>
+  <li>Cosmoglobe Website</li>
+  <li>BeyondPlanck Website</li>
 </ul>
-
-* [Cosmoglobe Website](https://www.cosmoglobe.uio.no/)
-* [BeyondPlanck Website](https://beyondplanck.science)
 
 
 <script>

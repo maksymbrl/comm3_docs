@@ -5,6 +5,37 @@
 
 # 
 
+<div class="demo-theme-preview">
+  <a data-theme="vue">vue.css</a>
+  <a data-theme="buble">buble.css</a>
+  <a data-theme="dark">dark.css</a>
+  <a data-theme="pure">pure.css</a>
+</div>
+
+<style>
+  .demo-theme-preview a {
+    padding-right: 10px;
+  }
+
+  .demo-theme-preview a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  var preview = Docsify.dom.find('.demo-theme-preview');
+  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+
+  preview.onclick = function (e) {
+    var title = e.target.getAttribute('data-theme');
+
+    themes.forEach(function (theme) {
+      theme.disabled = theme.title !== title;
+    });
+  };
+</script>
+
 # Theoretical Background
 
 [Commander3](https://github.com/Cosmoglobe/Commander) is a Bayesian Markov Chain Monte Carlo sampler for CMB, microwave and sub-mm observations. It fits a user-specified parametric model, $s(\theta)$, to some set of observations, $d_\nu$, by mapping the posterior distribution $P(\theta|d)$ with standard sampling techniques, in particular Gibbs and Metropolis sampling. A concrete example of this is the [BeyondPlanck](https://beyondplanck.science) data model, which reads

@@ -20,11 +20,12 @@
 </ul>
 
 <button onclick="myFunction()">Toggle dark mode</button>
-
+<style>
 .dark-mode {
   background-color: black;
   color: white;
 }
+ </style>
 
 <script>
 function myFunction() {

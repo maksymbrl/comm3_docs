@@ -130,7 +130,8 @@
             }
 	 },
 	 plugins: [
-		 EditOnGithubPlugin.create('', '', 'Edit this page'),
+		 // Removing "Edit this page"
+		 //EditOnGithubPlugin.create('', '', 'Edit this page'),
 		 function (hook) {
 			 hook.afterEach(function (html) {
 				 return headerWarning + html + footer;

@@ -1,3 +1,18 @@
+<button type="button" onclick="switch_style('blue');return false;" name="theme" value="Blue Theme" id="blue">Blue Theme</button>
+<button type="button" onclick="switch_style('pink');return false;" name="theme" value="Pink Theme" id="pink">Pink Theme</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul>
   <li>Themes
     <ul>

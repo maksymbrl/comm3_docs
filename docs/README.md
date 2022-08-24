@@ -17,6 +17,8 @@ Some text to see whether we have gotten the right stuff
   <a data-theme="buble">buble.css</a>
   <a data-theme="dark">dark.css</a>
   <a data-theme="pure">pure.css</a>
+  <a data-theme="themeable-dark">theable-dark.css</a>
+  <a data-theme="themeable-light">theable-light.css</a>
 </div>
 
 <style>

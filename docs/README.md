@@ -7,6 +7,9 @@
 
 # Random Text
 
+
+More text here and there
+
 Some text to see whether we have gotten the right stuff
 
 <div class="demo-theme-preview">

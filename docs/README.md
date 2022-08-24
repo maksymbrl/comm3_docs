@@ -5,6 +5,10 @@
 
 # 
 
+# Random Text
+
+Some text to see whether we have gotten the right stuff
+
 <div class="demo-theme-preview">
   <a data-theme="vue">vue.css</a>
   <a data-theme="buble">buble.css</a>

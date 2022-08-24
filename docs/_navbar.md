@@ -12,3 +12,17 @@
 
 * [Cosmoglobe Website](https://www.cosmoglobe.uio.no/)
 * [BeyondPlanck Website](https://beyondplanck.science)
+
+
+<script>
+  var preview = Docsify.dom.find('.demo-theme-preview');
+  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+
+  preview.onclick = function (e) {
+     var title = e.target.getAttribute('data-theme');
+
+     themes.forEach(function (theme) {
+        theme.disabled = theme.title !== title;
+     });
+  };
+</script>
